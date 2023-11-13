@@ -21,7 +21,28 @@
 	
 		function ktora_cwiartka()
 		{
-			
+			x = document.getElementById("x").value;
+            x = parseFloat(x);
+            y = document.getElementById("y").value;
+            y = parseFloat(y);
+
+
+            if(x > 0 && y > 0)
+            {
+                document.getElementById("wynik").innerHTML = "I cwiartka";
+            }
+            else if(x < 0 && y > 0)
+            {
+                document.getElementById("wynik").innerHTML = "II cwiartka";
+            }
+            else if(x < 0 && y < 0)
+            {
+                document.getElementById("wynik").innerHTML = "III cwiartka";
+            }
+            else if(x > 0 && y < 0)
+            {
+                document.getElementById("wynik").innerHTML = "IV cwiartka";
+            }
 			
 		}
 
