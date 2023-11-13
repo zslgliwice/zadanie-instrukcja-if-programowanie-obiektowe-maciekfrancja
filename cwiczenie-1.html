@@ -12,7 +12,7 @@
 <body>
 
 	<label>
-		Podaj numer dnia tygodnia: <input type="number">
+		Podaj numer dnia tygodnia: <input type="number" id="day">
 	</label>
 	
 	<input type="submit" value="Zobacz nazwę dnia" onclick="getDayName()">
@@ -23,7 +23,33 @@
 	
 		function getDayName()
 		{
-					
+            let day = document.getElementById("day").value;
+            day = parseInt(day);
+					switch(day)
+                    {
+                        case 1:
+                            return  document.getElementById("wynik").innerHTML = "Poniedzialek";
+                            break;
+                        case 2:
+                            return  document.getElementById("wynik").innerHTML = "Wtorek";
+                            break;
+                        case 3:
+                            return  document.getElementById("wynik").innerHTML = "Środa";
+                            break;
+                        case 4:
+                            return  document.getElementById("wynik").innerHTML = "Czwartek";
+                            break;
+                        case 5:
+                            return  document.getElementById("wynik").innerHTML = "Piatek";
+                            break;
+                        case 6:
+                            return  document.getElementById("wynik").innerHTML = "Sobota";
+                            break;
+                        case 7:
+                            return  document.getElementById("wynik").innerHTML = "Niedziela";
+                            break;
+                    }
+                    
 			
 		}
 
