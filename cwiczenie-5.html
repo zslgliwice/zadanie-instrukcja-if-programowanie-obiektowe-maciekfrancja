@@ -1,31 +1,68 @@
 <!DOCTYPE html>
-<html lang="pl">
-
+<html lang="en">
 <head>
-
-	<meta charset="utf-8">
-	<title>5 - Instrukcja warunkowa w JavaScript</title>
-	<link href="arkusz-cwiczenia.css" rel="stylesheet">
-	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <button id="bramka1" onclick="butt1()">1</button>
+    <button id="bramka2" onclick="butt2()">2</button>
+    <button id="bramka3" onclick="butt3()">3</button>
+    <span id="wynik"></span>
 
-	<label> Którą bramkę wybierasz: <input type="number" id="bramka"> </label>
+    <script>
+        function butt1(){
 
-	<input type="submit" value="Wybieram bramkę" onclick="teleturniej()">
+            let szczesliwa = Math.floor(Math.random()*3 + 1);
+            szczesliwa = parseInt(szczesliwa);
 
-	<div id="wynik"></div>
-	
-	<script>
-	
-		function teleturniej()
-		{
-			var lucky = Math.floor(Math.random() * 3) + 1;
-			
-		}
+            button1 = 1;
 
-	</script>
+            if(button1 == szczesliwa)
+            {
+                document.getElementById("wynik").innerHTML = "WYGRALES!";
+            }
+            else
+            {
+                document.getElementById("wynik").innerHTML = "PROBUJ DALEJ!";
+            }
+        }
 
+        function butt2(){
+
+            let szczesliwa = Math.floor(Math.random()*3 + 1);
+            szczesliwa = parseInt(szczesliwa);
+
+            button2 = 2;
+
+            if(button2 == szczesliwa)
+            {
+                document.getElementById("wynik").innerHTML = "WYGRALES!";
+            }
+            else
+            {
+                document.getElementById("wynik").innerHTML = "PROBUJ DALEJ!";
+            }
+        }
+        function butt3(){
+
+            button3 = 3;
+
+            let szczesliwa = Math.floor(Math.random()*3 + 1);
+            szczesliwa = parseInt(szczesliwa);
+
+
+            if(button3 == szczesliwa)
+            {
+                document.getElementById("wynik").innerHTML = "WYGRALES!";
+            }
+            else
+            {
+                document.getElementById("wynik").innerHTML = "PROBUJ DALEJ!";
+            }
+        }
+    </script>
 </body>
 </html>
